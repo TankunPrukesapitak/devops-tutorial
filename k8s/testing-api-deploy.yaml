@@ -18,6 +18,6 @@ spec:
         app: testing-api
     spec:
       containers:
-      - image: tankunprukesapitak/testapi:V0.0.1
+      - image: tankunprukesapitak/testapi:${VERSION}
         name: testingapi
         resources: {}
