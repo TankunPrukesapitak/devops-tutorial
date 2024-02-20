@@ -13,9 +13,9 @@ pipeline {
 					env.VERSION = "v0.0.${BUILD_NUMBER}"
 					sh('''
 						echo =================Build and Push Docker Image==========================
-						docker build -t testapi:${VERSION} -f TestingAPI/Dockerfile .
-						docker tag testapi:${VERSION} tankunprukesapitak/testapi:${VERSION}
-						docker push tankunprukesapitak/testapi:${VERSION}
+						sudo docker build -t testapi:${VERSION} -f TestingAPI/Dockerfile .
+						sudo docker tag testapi:${VERSION} tankunprukesapitak/testapi:${VERSION}
+						sudo docker push tankunprukesapitak/testapi:${VERSION}
 					''')
 				}
 			}
