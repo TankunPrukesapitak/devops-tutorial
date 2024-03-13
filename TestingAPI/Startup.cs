@@ -29,7 +29,7 @@ namespace TestingAPI
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "TestingAPI", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "TestingAPI", Version = "v3" });
             });
         }
 
@@ -40,7 +40,7 @@ namespace TestingAPI
 //          {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TestingAPI v3"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TestingAPI v1"));
 //      }
 
             app.UseRouting();
